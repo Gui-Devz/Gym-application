@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Membros</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="card">
+        <section class="avatar">
+        </section>
+        <section class="details">
+            <h3>Cadastrar-se</h3>
+            <form action="" method="post">
+                <div class="item">
+                    <div>Avatar URL:</div>
+                    <div><input type="url" placeholder="https://"></div>
+                </div>
+                
+                <div class="item">
+                    <div>Sexo</div>
+                    <div>Msculino</div>
+                </div>
+
+                <div class="item">
+                    <div>Idade</div>
+                    <div>29</div>
+                </div>
+
+                <div class="item">
+                    <div>Acompanhamento</div>
+                    <div>
+                        <span>Musculação</span>
+                        <span>Crossfit</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div>Desde</div>
+                    <div>2018</div>
+                </div>
+            </form>
+            
+        </section>
+    </div>
+
+
+{% endblock content %}

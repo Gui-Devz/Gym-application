@@ -16,7 +16,7 @@ body {
     font-family: "Roboto";
 
     background-color: var(--primary-color);
-    color: white;
+    color: black;
 }
 
 header {
@@ -81,7 +81,7 @@ header {
 
 .card {
     width: 800px;
-    height: 400px;
+    min-height: 400px;
 
     background-color: white;
 
@@ -89,6 +89,7 @@ header {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
 
     /*sombra*/
     box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.5);
@@ -111,11 +112,74 @@ header {
 
 .avatar {
     max-width: 400px;
-    height: 400px;
+    min-height: 400px;
     background-image: url(https://source.unsplash.com/collection/9540586/400x400);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
+}
+
+/* Details */
+
+.details {
+    padding: 0 32px;
+
+    box-sizing: border-box;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 16px 0;
+
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+
+    box-sizing: border-box;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: large;
+    text-transform: uppercase;
+    padding: 0;
+    margin-top: 8px;
+
+    border-bottom: none;
+}
+
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    color: #777;
+}
+
+.details .item div:nth-child(2) {
+    font-weight: bold;
+    color: #000;
+}
+
+.details .item:last-child {
+    border-bottom: none;
+}
+
+.details .item span {
+    background-color: #f7bf1e;
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+
+    width: fit-content;
+
+    border-radius: 16px;
+
+    padding: 8px 4px;
+
+    margin-top: 6px;
+
+    display: inline-block;
 }
