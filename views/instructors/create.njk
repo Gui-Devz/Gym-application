@@ -5,44 +5,44 @@
 {% endblock head %}
 
 {% block content %}
-    <div class="card" method="POST" action="/instructors">
+    <div class="card">
         <section class="avatar">
         </section>
-        <form class="details">
+        <form class="details" method="POST" action="/instructors">
             <h3>Cadastrar-se</h3>
-                <div class="item">
-                    <div>Avatar URL:</div>
-                    <div><input type="url" name="link" placeholder="https://"></div>
-                </div>
+            <div class="item">
+                <div>Avatar URL:</div>
+                <div><input type="url" name="link" placeholder="https://"></div>
+            </div>
 
-                <div class="item">
-                    <div>Instrutor:</div>
-                    <div><input type="text" name="name" placeholder="Nome do instrutor"></div>
+            <div class="item">
+                <div>Instrutor:</div>
+                <div><input type="text" name="name" placeholder="Nome do instrutor"></div>
+            </div>
+            
+            <div class="item">
+                <div>Sexo:</div>
+                <div>
+                    <span><input type="radio" name="gender" value="M" checked >Masculino</span>
+                    <span><input type="radio" name="gender" value="F">Feminino</span>
                 </div>
-                
-                <div class="item">
-                    <div>Sexo:</div>
-                    <div>
-                        <span><input type="radio" name="gender" value="M" checked >Masculino</span>
-                        <span><input type="radio" name="gender" value="F">Feminino</span>
-                    </div>
-                </div>
+            </div>
 
-                <div class="item">
-                    <div>Data de nascimento:</div>
-                    <div><input type="date" name="birth"></div>
-                </div>
+            <div class="item">
+                <div>Data de nascimento:</div>
+                <div><input type="date" name="birth"></div>
+            </div>
 
-                <div class="item">
-                    <div>Área de atuação:</div>
-                    <div>
-                        <input type="text" placeholder="Separe os serviços por vírgula">
-                    </div>
+            <div class="item">
+                <div>Área de atuação:</div>
+                <div>
+                    <input type="text" placeholder="Separe os serviços por vírgula">
                 </div>
+            </div>
 
-                <div class="item">
-                    <div><input type="button" value="Cadastrar" action="SEND"></div>
-                </div>
+            <div class="item">
+                <div><button type="submit">Cadastrar</button></div>
+            </div>
 
         </form>
     </div>

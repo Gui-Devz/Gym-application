@@ -216,7 +216,7 @@ input::placeholder {
     font-weight: normal;
 }
 
-.details .item input[type="button"] {
+.details .item button {
     width: 100%;
     padding: 8px 32px;
     border-radius: 8px;
