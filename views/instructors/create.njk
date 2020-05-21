@@ -5,42 +5,46 @@
 {% endblock head %}
 
 {% block content %}
-    <div class="card">
+    <div class="card" method="POST" action="/instructors">
         <section class="avatar">
         </section>
-        <section class="details">
+        <form class="details">
             <h3>Cadastrar-se</h3>
-            <form action="" method="post">
                 <div class="item">
                     <div>Avatar URL:</div>
-                    <div><input type="url" placeholder="https://"></div>
+                    <div><input type="url" name="link" placeholder="https://"></div>
+                </div>
+
+                <div class="item">
+                    <div>Instrutor:</div>
+                    <div><input type="text" name="name" placeholder="Nome do instrutor"></div>
                 </div>
                 
                 <div class="item">
-                    <div>Sexo</div>
-                    <div>Msculino</div>
-                </div>
-
-                <div class="item">
-                    <div>Idade</div>
-                    <div>29</div>
-                </div>
-
-                <div class="item">
-                    <div>Acompanhamento</div>
+                    <div>Sexo:</div>
                     <div>
-                        <span>Musculação</span>
-                        <span>Crossfit</span>
+                        <span><input type="radio" name="gender" value="M" checked >Masculino</span>
+                        <span><input type="radio" name="gender" value="F">Feminino</span>
                     </div>
                 </div>
 
                 <div class="item">
-                    <div>Desde</div>
-                    <div>2018</div>
+                    <div>Data de nascimento:</div>
+                    <div><input type="date" name="birth"></div>
                 </div>
-            </form>
-            
-        </section>
+
+                <div class="item">
+                    <div>Área de atuação:</div>
+                    <div>
+                        <input type="text" placeholder="Separe os serviços por vírgula">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div><input type="button" value="Cadastrar" action="SEND"></div>
+                </div>
+
+        </form>
     </div>
 
 

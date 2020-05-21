@@ -9,6 +9,10 @@ routes.get("/instructors", (req, res) => {
     return res.render("instructors/index")
 })
 
+routes.post("/instructors", (req, res) => {
+    return res.send("Enviado")
+})
+
 routes.get("/members", (req, res) => {
     return res.send("members")
 })

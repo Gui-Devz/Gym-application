@@ -2,12 +2,13 @@
 
 :root {
     --primary-color: #7159c1;
+    --secondary-color: #f7bf1e;
 }
 
 * {
     margin: 0;
     padding: 0;
-    width: 100%;
+    max-width: 100%;
 }
 
 body {
@@ -86,6 +87,7 @@ header {
     background-color: white;
 
     margin: 50px auto;
+    border-radius: 12px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -113,6 +115,8 @@ header {
 .avatar {
     max-width: 400px;
     min-height: 400px;
+    border-radius: 12px 0px 0px 12px;
+
     background-image: url(https://source.unsplash.com/collection/9540586/400x400);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -125,20 +129,21 @@ header {
 
 .details {
     padding: 0 32px;
-
-    box-sizing: border-box;
 }
 
 .details .item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 16px 0;
+    max-width: 100%;
 
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
     letter-spacing: 0.2px;
+}
 
-    box-sizing: border-box;
+.details .item div:first-child {
+    margin-bottom: 6px;
 }
 
 h3 {
@@ -167,19 +172,60 @@ h3 {
 }
 
 .details .item span {
-    background-color: #f7bf1e;
+    background-color: var(--secondary-color);
     color: rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
+
     font-size: 12px;
     letter-spacing: 0.5px;
 
-    width: fit-content;
-
     border-radius: 16px;
 
-    padding: 8px 4px;
+    padding: 8px 16px;
 
-    margin-top: 6px;
+    margin-right: 4px;
 
-    display: inline-block;
+    display: inline-flex;
+}
+
+/* Create */
+
+.details .item input {
+    width: 100%;
+    outline: none;
+    border: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(119, 119, 119, 0.1);
+
+    padding: 4px 2px;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+}
+
+.details .item input[type="radio"] {
+    width: initial;
+    margin-right: 4px;
+    align-self: center;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.details .item input[type="button"] {
+    width: 100%;
+    padding: 8px 32px;
+    border-radius: 8px;
+
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background-color: var(--secondary-color);
 }
