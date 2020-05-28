@@ -19,13 +19,6 @@ exports.post = (req, res) => {
     birth = Date.parse(req.body.birth)
     const created_at = Date.now()
     const id = Number(data.instructors.length + 1)
-    services.split(",")
-
-    if (gender == "M") {
-        gender = "Masculino"
-    } else {
-        gender = "Feminino"
-    }
 
     data.instructors.push({
         id,
@@ -42,7 +35,7 @@ exports.post = (req, res) => {
             return res.send("Writing file failed!")
         } else {
             //return res.redirect("/instructors")
-            return res.send(data)
+            return res.redirect("instructors/show")
         }
     })
 }
@@ -57,7 +50,32 @@ exports.show = (req, res) => {
 
     if (!findInstructor) return res.send("Instructor not found!")
 
-    return res.render("instructors/index", { instructor: findInstructor })
+    function age(timestamp) {
+        const today = new Date()
+        const birthDate = new Date(timestamp)
+
+        //2020 - 1997 = 23
+        let age = today.getFullYear() - birthDate.getFullYear()
+        const month = today.getMonth() - birthDate.getMonth()
+
+        if (
+            month < 0 ||
+            (month == 0 && today.getDate() < birthDate.getDate())
+        ) {
+            age = age - 1
+        }
+
+        return age
+    }
+
+    const instructor = {
+        ...findInstructor,
+        age: age(findInstructor.birth),
+        services: findInstructor.services.split(","),
+        created_at: "",
+    }
+
+    return res.render("instructors/show", { instructor })
 }
 
 //Atualizando
