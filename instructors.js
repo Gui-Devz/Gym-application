@@ -68,11 +68,15 @@ exports.show = (req, res) => {
         return age
     }
 
+    const options = { day: "numeric", month: "long", year: "numeric" }
+
     const instructor = {
         ...findInstructor,
         age: age(findInstructor.birth),
         services: findInstructor.services.split(","),
-        created_at: "",
+        created_at: Intl.DateTimeFormat("en-GB", options).format(
+            findInstructor.created_at
+        ),
     }
 
     return res.render("instructors/show", { instructor })
