@@ -1,5 +1,6 @@
 const fs = require("fs")
 const data = require("./data.json")
+const { age, formatBrowser } = require("./utils")
 
 //Create
 exports.post = (req, res) => {
@@ -50,29 +51,11 @@ exports.show = (req, res) => {
 
     if (!findInstructor) return res.send("Instructor not found!")
 
-    function age(timestamp) {
-        const today = new Date()
-        const birthDate = new Date(timestamp)
-
-        //2020 - 1997 = 23
-        let age = today.getFullYear() - birthDate.getFullYear()
-        const month = today.getMonth() - birthDate.getMonth()
-
-        if (
-            month < 0 ||
-            (month == 0 && today.getDate() < birthDate.getDate())
-        ) {
-            age = age - 1
-        }
-
-        return age
-    }
-
     const options = { day: "numeric", month: "long", year: "numeric" }
 
     const instructor = {
         ...findInstructor,
-        age: age(findInstructor.birth),
+        age: formatBrowser(findInstructor.birth),
         services: findInstructor.services.split(","),
         created_at: Intl.DateTimeFormat("en-GB", options).format(
             findInstructor.created_at
@@ -83,3 +66,20 @@ exports.show = (req, res) => {
 }
 
 //Atualizando
+
+exports.edit = (req, res) => {
+    const { id } = req.params
+
+    const findInstructor = data.instructors.find((instructor) => {
+        return instructor.id == id
+    })
+
+    if (!findInstructor) return res.send("Instructor not found!")
+
+    const instructor = {
+        ...findInstructor,
+        age: formatBrowser(findInstructor.birth),
+    }
+
+    return res.render("instructors/edit", { instructor })
+}

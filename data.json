@@ -1,13 +1,31 @@
 {
-    "instructors": [
-        {
-            "id": 1,
-            "avatar_url": "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_1920x1080.png",
-            "name": "Guilherme Zagari de Freitas Batalha",
-            "birth": 857865600000,
-            "gender": "M",
-            "services": "Crossfit, Musculação, Natação, Aeróbica",
-            "created_at": 1590801769430
-        }
-    ]
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_1920x1080.png",
+      "name": "Guilherme Zagari de Freitas Batalha",
+      "birth": 857865600000,
+      "gender": "F",
+      "services": "Crossfit, Musculação, Natação, Aeróbica",
+      "created_at": 1590801769430
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1qERhXNirHFcsGKUeqci4vs0LYsoYlyluy6mRxwubD-G2gBZA&usqp=CAU",
+      "name": "Guilherme Zagari de Freitas Batalha",
+      "birth": 857779200000,
+      "gender": "F",
+      "services": "Crossfit, Musculação, Natação, Aeróbica",
+      "created_at": 1591150356308
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1qERhXNirHFcsGKUeqci4vs0LYsoYlyluy6mRxwubD-G2gBZA&usqp=CAU",
+      "name": "Guilherme Zagari de Freitas Batalha",
+      "birth": 857692800000,
+      "gender": "F",
+      "services": "Crossfit, Musculação, Natação, Viadagem",
+      "created_at": 1591150410615
+    }
+  ]
 }
