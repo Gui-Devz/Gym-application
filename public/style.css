@@ -138,6 +138,8 @@ header {
     line-height: 18px;
     font-weight: 500;
     letter-spacing: 0.2px;
+
+    position: relative;
 }
 
 .details .item div:first-child {
@@ -215,7 +217,7 @@ input::placeholder {
     font-weight: normal;
 }
 
-.details .item button {
+.button {
     width: 100%;
     padding: 8px 32px;
     border-radius: 8px;
@@ -224,7 +226,13 @@ input::placeholder {
     font-size: 12px;
     font-weight: bold;
 
+    color: white;
+
     cursor: pointer;
 
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.item a.button {
+    text-decoration: none;
 }

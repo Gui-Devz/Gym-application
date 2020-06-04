@@ -11,15 +11,18 @@
     <section class="avatar" style="background-image: url({{instructor.avatar_url}});">
     </section>
 
-    <form class="details" method="POST" action="/instructors">
+    <form class="details" method="POST" action="/instructors?_method=PUT">
     <h3>Editando cadastro</h3>
-{% include 'instructors/fields.njk'%}
+        {% include 'instructors/fields.njk'%}
+
+        <input type="hidden" name="id" value="{{instructor.id}}">
 
         <div class="item">
-            <div><button type="submit">Salvar</button></div>
+            <div><button class="button" type="submit">Salvar</button></div>
         </div>
 
     </form>
+    
 </div>
 
 

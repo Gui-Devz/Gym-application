@@ -55,7 +55,7 @@ exports.show = (req, res) => {
 
     const instructor = {
         ...findInstructor,
-        age: formatBrowser(findInstructor.birth),
+        age: age(findInstructor.birth),
         services: findInstructor.services.split(","),
         created_at: Intl.DateTimeFormat("en-GB", options).format(
             findInstructor.created_at
@@ -65,7 +65,7 @@ exports.show = (req, res) => {
     return res.render("instructors/show", { instructor })
 }
 
-//Atualizando
+//Alterando dados
 
 exports.edit = (req, res) => {
     const { id } = req.params
@@ -82,4 +82,30 @@ exports.edit = (req, res) => {
     }
 
     return res.render("instructors/edit", { instructor })
+}
+
+//Salvando dados alterados
+
+exports.put = (req, res) => {
+    const { id } = req.body
+
+    const findInstructor = data.instructors.find((instructor) => {
+        return instructor.id == id
+    })
+
+    if (!findInstructor) return res.send("Instructor not found!")
+
+    instructor = {
+        ...findInstructor,
+        ...req.body,
+        birth: Date.parse(req.body.birth),
+    }
+
+    data.instructors[id - 1] = instructor
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if (err) return "Error Write File!"
+
+        return res.redirect(`/instructors/${instructor.id}`)
+    })
 }
