@@ -36,7 +36,7 @@ exports.post = (req, res) => {
             return res.send("Writing file failed!")
         } else {
             //return res.redirect("/instructors")
-            return res.redirect("instructors/show")
+            return res.redirect(`instructors/${id}`)
         }
     })
 }
@@ -89,8 +89,14 @@ exports.edit = (req, res) => {
 exports.put = (req, res) => {
     const { id } = req.body
 
-    const findInstructor = data.instructors.find((instructor) => {
-        return instructor.id == id
+    let index = 0
+
+    const findInstructor = data.instructors.find((instructor, foundIndex) => {
+        if (instructor.id == id) {
+            index = foundIndex
+
+            return true
+        }
     })
 
     if (!findInstructor) return res.send("Instructor not found!")
@@ -101,11 +107,37 @@ exports.put = (req, res) => {
         birth: Date.parse(req.body.birth),
     }
 
-    data.instructors[id - 1] = instructor
+    data.instructors[index] = instructor
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
         if (err) return "Error Write File!"
 
         return res.redirect(`/instructors/${instructor.id}`)
+    })
+}
+
+//Delete instructor function
+
+exports.delete = (req, res) => {
+    const { id } = req.body
+
+    const findInstructor = data.instructors.find((instructor) => {
+        return instructor.id == id
+    })
+
+    if (!findInstructor) return res.send("Instructor not found!")
+
+    let filterOfInstructorsDeleted = data.instructors.filter((instructor) => {
+        if (instructor.id != id) return true
+
+        return false
+    })
+
+    data.instructors = filterOfInstructorsDeleted
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if (err) return res.send("Error Write File!")
+
+        return res.redirect("instructors")
     })
 }
