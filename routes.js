@@ -2,13 +2,14 @@ const express = require("express")
 const routes = express.Router()
 const fs = require("fs")
 const instructors = require("./instructors")
+const data = require("./data.json")
 
 routes.get("/", (req, res) => {
     return res.redirect("/instructors")
 })
 
 routes.get("/instructors", (req, res) => {
-    return res.render("instructors/index")
+    return res.render("instructors/index", { instructors: data.instructors })
 })
 
 routes.get("/members", (req, res) => {
