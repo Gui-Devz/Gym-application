@@ -7,6 +7,8 @@ const server = express()
 
 server.use(express.urlencoded({ extended: true }))
 server.use(express.static("public"))
+server.use(express.static("controllers"))
+server.use(express.static("scripts"))
 server.use(methodOverride("_method"))
 server.use(routes)
 

@@ -1,6 +1,6 @@
 const fs = require("fs")
-const data = require("./data.json")
-const { age, formatBrowser } = require("./utils")
+const data = require("../data.json")
+const { age, formatBrowser } = require("../scripts/utils")
 
 //Create
 exports.post = (req, res) => {

@@ -13,11 +13,13 @@
 <body>
     <header>
         <div class="links">
-            <a href="/" class="menu">Instrutores</a>
-            <a href="/members" class="menu active">Membros</a>
+            <a href="/" id="instructors" class="menu">Instrutores</a>
+            <a href="/members" id="members" class="menu">Membros</a>
         </div>
     </header>
     {% block content %}{% endblock %}
+
+    <script src="/menuInteraction.js"></script>
 </body>
 </html>
 

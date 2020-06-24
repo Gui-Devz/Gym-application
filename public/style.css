@@ -358,3 +358,20 @@ tbody tr td:first-child span {
     background-position-y: center;
     background-size: cover;
 }
+
+/*BOTÃO EDITAR*/
+
+.item a {
+    text-decoration: none;
+}
+
+.details .item a .button {
+    color: white;
+}
+
+/* MEMBERS FIELDS FORM */
+
+.activities-member {
+    height: 70px;
+    text-align: initial;
+}
