@@ -2,6 +2,7 @@ const express = require("express")
 const routes = express.Router()
 const fs = require("fs")
 const instructors = require("./controllers/instructors")
+const members = require("./controllers/members")
 const data = require("./data.json")
 
 //INSTRUCTOR ROUTES
@@ -23,11 +24,13 @@ routes.delete("/instructors", instructors.delete)
 // MEMBERS ROUTES
 
 routes.get("/members", (req, res) => {
-    return res.render("members/index")
+    return res.render("layout")
 })
 
 routes.get("/members/create", (req, res) => {
     return res.render("members/create")
 })
+
+routes.post("/members", members.post)
 
 module.exports = routes
