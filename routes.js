@@ -31,6 +31,8 @@ routes.get("/members/create", (req, res) => {
     return res.render("members/create")
 })
 
+routes.get("/members/:id", members.show)
+
 routes.post("/members", members.post)
 
 module.exports = routes

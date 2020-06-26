@@ -27,7 +27,21 @@ exports.post = (req, res) => {
     fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
         if (err) return "Error Writting file"
 
-        //return res.redirect(`members/${id}`)
-        return res.redirect("members")
+        return res.redirect(`members/${id}`)
     })
+}
+
+exports.show = (req, res) => {
+    const { id } = req.params
+
+    const findMember = data.members.find((member) => {
+        if (member.id == id) return true
+    })
+
+    const member = {
+        ...findMember,
+        activities: findMember.activities.split(","),
+    }
+
+    return res.render("members/show", { member })
 }
