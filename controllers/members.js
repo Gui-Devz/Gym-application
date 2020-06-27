@@ -15,6 +15,7 @@ exports.post = (req, res) => {
 
     const lenghtOfMembers = data.members.length
     const id = Number(lenghtOfMembers + 1)
+    const created_at = Date.now()
 
     data.members.push({
         id,
@@ -22,6 +23,7 @@ exports.post = (req, res) => {
         name,
         gender,
         activities,
+        created_at,
     })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
@@ -38,9 +40,12 @@ exports.show = (req, res) => {
         if (member.id == id) return true
     })
 
+    const yearSubscription = new Date(findMember.created_at)
+
     const member = {
         ...findMember,
         activities: findMember.activities.split(","),
+        created_at: yearSubscription.getFullYear(),
     }
 
     return res.render("members/show", { member })

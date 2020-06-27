@@ -76,6 +76,14 @@
       "name": "Paty",
       "gender": "F",
       "activities": "Ginástica, cooper"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1qERhXNirHFcsGKUeqci4vs0LYsoYlyluy6mRxwubD-G2gBZA&usqp=CAU",
+      "name": "Guiilherme Zagari de Freitas Batalha",
+      "gender": "M",
+      "activities": "Musculação",
+      "created_at": 1593225629031
     }
   ]
 }
