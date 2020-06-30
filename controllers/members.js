@@ -40,6 +40,8 @@ exports.show = (req, res) => {
         if (member.id == id) return true
     })
 
+    if (!findMember) return res.send("Member not found!")
+
     const yearSubscription = new Date(findMember.created_at)
 
     const member = {
@@ -49,4 +51,20 @@ exports.show = (req, res) => {
     }
 
     return res.render("members/show", { member })
+}
+
+exports.edit = (req, res) => {
+    const { id } = req.params
+
+    const findMember = data.members.find((member) => {
+        if (member.id == id) return true
+    })
+
+    if (!findMember) return res.send("Member not found!")
+
+    const member = {
+        ...findMember,
+    }
+
+    return res.render("members/edit", { member })
 }

@@ -32,6 +32,7 @@ routes.get("/members/create", (req, res) => {
 })
 
 routes.get("/members/:id", members.show)
+routes.get("/members/:id/edit", members.edit)
 
 routes.post("/members", members.post)
 
