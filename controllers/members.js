@@ -14,6 +14,7 @@ exports.post = (req, res) => {
   let { avatar_url, name, gender, activities } = urlEncoded;
 
   const lenghtOfMembers = data.members.length;
+
   const id = Number(lenghtOfMembers + 1);
   const created_at = Date.now();
 
@@ -83,6 +84,8 @@ exports.put = (req, res) => {
     }
   });
 
+  if (!findMember) return res.send("Member not found!");
+
   data.members[foundIndex] = {
     ...findMember,
     ...urlEncoded,
@@ -93,5 +96,25 @@ exports.put = (req, res) => {
     if (err) return "Error Writting file";
 
     return res.redirect(`members/${id}`);
+  });
+};
+
+exports.delete = (req, res) => {
+  const urlEncoded = req.body;
+
+  const { id } = urlEncoded;
+
+  let filterOfMemberDeleted = data.members.filter((instructor) => {
+    if (instructor.id != id) return true;
+
+    return false;
+  });
+
+  data.members = filterOfMemberDeleted;
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+    if (err) return res.send("Error Write File!");
+
+    return res.redirect("members");
   });
 };
