@@ -35,5 +35,6 @@ routes.get("/members/:id", members.show)
 routes.get("/members/:id/edit", members.edit)
 
 routes.post("/members", members.post)
+routes.put("/members", members.put)
 
 module.exports = routes
