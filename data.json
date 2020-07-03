@@ -1,24 +1,6 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1qERhXNirHFcsGKUeqci4vs0LYsoYlyluy6mRxwubD-G2gBZA&usqp=CAU",
-      "name": "Guilherme Zagari de Freitas Batalha",
-      "birth": 1590969600000,
-      "gender": "M",
-      "services": "Crossfit, Musculaçã",
-      "created_at": 1591317447713
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://vignette.wikia.nocookie.net/avatar/images/c/ce/Aang.png/revision/latest?cb=20161129194603&path-prefix=pt-br",
-      "name": "Aang Air Bender",
-      "birth": 1200441600000,
-      "gender": "M",
-      "services": "Bending Air, Kicking some fire bender asses",
-      "created_at": 1591739799942
-    },
-    {
       "id": 3,
       "avatar_url": "https://i.pinimg.com/originals/22/ec/8a/22ec8ad5f4f01b119223f76366cfc34d.jpg",
       "name": "Damian Wayne",
@@ -37,15 +19,6 @@
       "created_at": 1591740046209
     },
     {
-      "id": 5,
-      "avatar_url": "https://d2skuhm0vrry40.cloudfront.net/2019/articles/2019-12-10-10-29/ELYlz2qWwAIuAX_.jpeg/EG11/thumbnail/750x422/format/jpg/quality/60",
-      "name": "Diana Prince",
-      "birth": -9120470400000,
-      "gender": "F",
-      "services": "Beautiful like a god, Very honest, Fighter, Warrior, Princess",
-      "created_at": 1591740226725
-    },
-    {
       "id": 6,
       "avatar_url": "https://d2skuhm0vrry40.cloudfront.net/2019/articles/2019-12-10-10-29/ELYlz2qWwAIuAX_.jpeg/EG11/thumbnail/750x422/format/jpg/quality/60",
       "name": "Diana Prince",
@@ -58,15 +31,27 @@
   "members": [
     {
       "id": 1,
-      "avatar_url": "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_1920x1080.png",
-      "name": "Ynborn",
-      "email": "zarizari@gmail.com",
-      "birth": 965606400000,
-      "cities": "São Paulo",
+      "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1qERhXNirHFcsGKUeqci4vs0LYsoYlyluy6mRxwubD-G2gBZA&usqp=CAU",
+      "name": "LeroLero",
+      "email": "guizinpequinin@gmail.com",
+      "birth": 944784000000,
+      "age": 20,
+      "cities": "Osasco",
       "gender": "F",
-      "activities": "dodging bullets",
-      "created_at": 1593736928132,
-      "age": 19
+      "activities": "going with everything",
+      "created_at": 1593741762524
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://d2skuhm0vrry40.cloudfront.net/2019/articles/2019-12-10-10-29/ELYlz2qWwAIuAX_.jpeg/EG11/thumbnail/750x422/format/jpg/quality/60",
+      "name": "Lari Aril",
+      "email": "zucristavis@hotmail.com",
+      "birth": 994550400000,
+      "age": 18,
+      "cities": "Barueri",
+      "gender": "F",
+      "activities": "Corrida, Aeróbica, Ginastica",
+      "created_at": 1593741791585
     }
   ]
 }
