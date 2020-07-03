@@ -7,6 +7,29 @@
         <div>Nome:</div>
         <div><input type="text" name="name" placeholder="Seu nome aqui" value="{{member.name}}"></div>
     </div>
+
+    <div class="item">
+        <div>Email:</div>
+        <div><input type="email" name="email" placeholder="Seu e-mail aqui" value="{{member.email}}"></div>
+    </div>
+
+    <div class="item">
+        <div>Data de nascimento:</div>
+        <div><input type="date" name="birth" value="{{member.birth}}"></div>
+    </div>
+
+    <div class="item">
+        <div>Cidade:</div>
+        <div><select name="cities">
+            <option value="Osasco">Osasco</option>
+            <option value="São Paulo">São Paulo</option>
+            <option value="Barueri">Barueri</option>
+            <option value="Guarulhos">Guarulhos</option>
+            <option value="Santos">Santos</option>
+            <option value="Peruíbe">Peruíbe</option>
+        </select></div>
+        
+    </div>
     
     <div class="item">
         <div>Sexo:</div>

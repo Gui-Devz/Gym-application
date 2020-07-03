@@ -1,5 +1,6 @@
 const fs = require("fs");
 const data = require("../data.json");
+const utils = require("../scripts/utils");
 
 exports.post = (req, res) => {
   const urlEncoded = req.body;
@@ -11,17 +12,33 @@ exports.post = (req, res) => {
     }
   }
 
-  let { avatar_url, name, gender, activities } = urlEncoded;
+  let {
+    avatar_url,
+    name,
+    email,
+    birth,
+    cities,
+    gender,
+    activities,
+  } = urlEncoded;
 
-  const lenghtOfMembers = data.members.length;
+  let id = 1;
+  const lastMember = data.members[data.members.length - 1];
 
-  const id = Number(lenghtOfMembers + 1);
+  if (lastMember) {
+    id = lastMember.id + 1;
+  }
+
   const created_at = Date.now();
+  const birthDay = Date.parse(birth);
 
   data.members.push({
     id,
     avatar_url,
     name,
+    email,
+    birth: birthDay,
+    cities,
     gender,
     activities,
     created_at,
@@ -48,6 +65,7 @@ exports.show = (req, res) => {
   const member = {
     ...findMember,
     activities: findMember.activities.split(","),
+    birth: utils.formatBrowser(findMember.birth).birthday,
     created_at: yearSubscription.getFullYear(),
   };
 
@@ -65,6 +83,7 @@ exports.edit = (req, res) => {
 
   const member = {
     ...findMember,
+    birth: utils.formatBrowser(findMember.birth).iso,
   };
 
   return res.render("members/edit", { member });

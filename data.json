@@ -57,26 +57,15 @@
   ],
   "members": [
     {
-      "id": 2,
-      "avatar_url": "https://i.pinimg.com/originals/31/62/35/3162351f3a3e258288b372d899697a59.jpg",
-      "name": "Toph",
-      "gender": "F",
-      "activities": "Bending earth"
-    },
-    {
-      "id": 3,
+      "id": 1,
       "avatar_url": "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_1920x1080.png",
-      "name": "Paty",
-      "gender": "F",
-      "activities": "Ginástica, cooper"
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1qERhXNirHFcsGKUeqci4vs0LYsoYlyluy6mRxwubD-G2gBZA&usqp=CAU",
-      "name": "Guiilherme Zagari de Freitas Batalha",
+      "name": "Ynborn",
+      "email": "zarizari@gmail.com",
+      "birth": 1249603200000,
+      "cities": "Barueri",
       "gender": "M",
-      "activities": "Musculação",
-      "created_at": 1593225629031
+      "activities": "going with everything",
+      "created_at": 1593736928132
     }
   ]
 }
