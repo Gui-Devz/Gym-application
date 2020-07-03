@@ -305,11 +305,26 @@ thead th {
   padding-bottom: 15px;
 }
 
-table thead tr th:first-child,
-table thead tr th:nth-child(2) {
-  width: 350px;
+table thead tr th {
+  text-align: left;
+}
+
+table thead tr th:first-child {
+  width: 300px;
 
   text-align: left;
+}
+table thead tr th:last-child {
+  text-align: center;
+  width: 55px;
+}
+
+table thead tr th:nth-child(3) {
+  width: 55px;
+}
+
+table thead tr th:nth-child(4) {
+  width: 57px;
 }
 
 table tbody tr td:last-child {

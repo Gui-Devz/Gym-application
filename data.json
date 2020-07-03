@@ -65,7 +65,8 @@
       "cities": "São Paulo",
       "gender": "F",
       "activities": "dodging bullets",
-      "created_at": 1593736928132
+      "created_at": 1593736928132,
+      "age": 19
     }
   ]
 }

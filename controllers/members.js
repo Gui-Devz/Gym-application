@@ -38,6 +38,7 @@ exports.post = (req, res) => {
     name,
     email,
     birth: birthDay,
+    age: Number(utils.age(birthDay)),
     cities,
     gender,
     activities,
@@ -110,6 +111,7 @@ exports.put = (req, res) => {
     ...urlEncoded,
     id: Number(urlEncoded.id),
     birth: Date.parse(urlEncoded.birth),
+    age: Number(utils.age(urlEncoded.birth)),
   };
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
