@@ -21,12 +21,12 @@
     <div class="item">
         <div>Cidade:</div>
         <div><select name="cities">
-            <option value="Osasco">Osasco</option>
-            <option value="São Paulo">São Paulo</option>
-            <option value="Barueri">Barueri</option>
-            <option value="Guarulhos">Guarulhos</option>
-            <option value="Santos">Santos</option>
-            <option value="Peruíbe">Peruíbe</option>
+            <option value="Osasco" {% if member.cities == "Osasco" %} selected {% endif %}>Osasco</option>
+            <option value="São Paulo" {% if member.cities == "São Paulo" %} selected {% endif %}>São Paulo</option>
+            <option value="Barueri" {% if member.cities == "Barueri" %} selected {% endif %}>Barueri</option>
+            <option value="Guarulhos" {% if member.cities == "Guarulhos" %} selected {% endif %}>Guarulhos</option>
+            <option value="Santos" {% if member.cities == "Santos" %} selected {% endif %}>Santos</option>
+            <option value="Peruíbe" {% if member.cities == "Peruíbe" %} selected {% endif %}>Peruíbe</option>
         </select></div>
         
     </div>

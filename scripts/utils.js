@@ -21,6 +21,9 @@ module.exports = {
     const year = `${date.getUTCFullYear()}`;
 
     return {
+      day: day,
+      month: month,
+      year: year,
       iso: `${year}-${month}-${day}`,
       birthday: `${day}/${month}`,
     };
