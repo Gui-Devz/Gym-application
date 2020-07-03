@@ -108,7 +108,8 @@ exports.put = (req, res) => {
   data.members[foundIndex] = {
     ...findMember,
     ...urlEncoded,
-    id: Number(id),
+    id: Number(urlEncoded.id),
+    birth: Date.parse(urlEncoded.birth),
   };
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {

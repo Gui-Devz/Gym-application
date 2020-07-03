@@ -28,7 +28,7 @@
       "created_at": 1591739933166
     },
     {
-      "id": "4",
+      "id": 4,
       "avatar_url": "https://www.diariodepernambuco.com.br/static/app/noticia_127983242361/2019/12/03/812540/20191203093743682044o.jpg",
       "name": "Natasha Romanoff",
       "birth": 519004800000,
@@ -61,9 +61,9 @@
       "avatar_url": "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_1920x1080.png",
       "name": "Ynborn",
       "email": "zarizari@gmail.com",
-      "birth": "2009-08-07",
-      "cities": "Guarulhos",
-      "gender": "M",
+      "birth": 965606400000,
+      "cities": "São Paulo",
+      "gender": "F",
       "activities": "dodging bullets",
       "created_at": 1593736928132
     }

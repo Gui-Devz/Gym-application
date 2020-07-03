@@ -104,6 +104,7 @@ exports.put = (req, res) => {
   instructor = {
     ...findInstructor,
     ...req.body,
+    id: Number(req.body.id),
     birth: Date.parse(req.body.birth),
   };
 
