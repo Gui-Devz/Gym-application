@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "avatar_url": "https://www.diariodepernambuco.com.br/static/app/noticia_127983242361/2019/12/03/812540/20191203093743682044o.jpg",
-      "name": "Lari Aril",
-      "birth": -27103852800000,
-      "gender": "F",
-      "services": "Crossfit, Musculação, Natação",
-      "created_at": 1593828138302
-    },
-    {
       "id": 2,
       "avatar_url": "https://www.diariodepernambuco.com.br/static/app/noticia_127983242361/2019/12/03/812540/20191203093743682044o.jpg",
       "name": "Lari Aril",
@@ -170,6 +161,15 @@
       "gender": "F",
       "services": "Crossfit, Musculação, Natação",
       "created_at": 1593828601321
+    },
+    {
+      "id": 1,
+      "avatar_url": "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_1920x1080.png",
+      "name": "Ynborn",
+      "birth": -27103075200000,
+      "gender": "M",
+      "services": "Bending Air, Kicking some fire bender asses",
+      "created_at": 1593888862997
     }
   ],
   "members": [
