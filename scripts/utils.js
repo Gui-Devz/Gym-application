@@ -30,9 +30,10 @@ module.exports = {
   },
 
   positioningID: (array) => {
-    if (array.length == 0) {
+    if (array.length == 0 || (array.length == 1 && array.id != 1)) {
       return 1;
     }
+
     let positionsOfID = [];
 
     for (const user of array) {
@@ -47,7 +48,7 @@ module.exports = {
       if (positionsOfID[i] - positionsOfID[i - 1] > 1) {
         return positionsOfID[i] - 1;
       } else if (i == positionsOfID.length - 1) {
-        return positionsOfID.length + 1;
+        return positionsOfID[i] + 1;
       }
     }
   },
