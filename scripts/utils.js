@@ -30,7 +30,7 @@ module.exports = {
   },
 
   positioningID: (array) => {
-    if (array.length == 0 || (array.length == 1 && array.id != 1)) {
+    if (array.length == 0 || (array.length == 1 && array[0].id != 1)) {
       return 1;
     }
 
@@ -43,6 +43,8 @@ module.exports = {
     positionsOfID.sort((a, b) => {
       return a - b;
     });
+
+    if (positionsOfID[0] != 1) return 1;
 
     for (let i = 0; i < positionsOfID.length; i++) {
       if (positionsOfID[i] - positionsOfID[i - 1] > 1) {
