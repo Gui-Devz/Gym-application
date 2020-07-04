@@ -22,12 +22,9 @@ exports.post = (req, res) => {
     activities,
   } = urlEncoded;
 
-  let id = 1;
-  const lastMember = data.members[data.members.length - 1];
+  const id = utils.positioningID(data.members);
 
-  if (lastMember) {
-    id = lastMember.id + 1;
-  }
+  console.log(id);
 
   const created_at = Date.now();
   const birthDay = Date.parse(birth);

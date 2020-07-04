@@ -1,6 +1,7 @@
 const fs = require("fs");
 const data = require("../data.json");
 const { age, formatBrowser } = require("../scripts/utils");
+const utils = require("../scripts/utils");
 
 //Create
 exports.post = (req, res) => {
@@ -19,7 +20,8 @@ exports.post = (req, res) => {
 
   birth = Date.parse(req.body.birth);
   const created_at = Date.now();
-  const id = Number(data.instructors.length + 1);
+
+  const id = utils.positioningID(data.instructors);
 
   data.instructors.push({
     id,

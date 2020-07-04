@@ -28,4 +28,27 @@ module.exports = {
       birthday: `${day}/${month}`,
     };
   },
+
+  positioningID: (array) => {
+    if (array.length == 0) {
+      return 1;
+    }
+    let positionsOfID = [];
+
+    for (const user of array) {
+      positionsOfID.push(user.id);
+    }
+
+    positionsOfID.sort((a, b) => {
+      return a - b;
+    });
+
+    for (let i = 0; i < positionsOfID.length; i++) {
+      if (positionsOfID[i] - positionsOfID[i - 1] > 1) {
+        return positionsOfID[i] - 1;
+      } else if (i == positionsOfID.length - 1) {
+        return positionsOfID.length + 1;
+      }
+    }
+  },
 };
